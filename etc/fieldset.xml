@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author     Pavel Usachev <pausachev@gmail.com>
+ * @copyright  2019 Pavel Usachev
+ * @license    https://opensource.org/licenses/BSD-3-Clause  BSD-3-Clause
+ */
+-->
+<!--
+@TODO. This functionality not working @see \Magento\Framework\Model\AbstractExtensibleModel:getCustomAttributesCodes()
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:DataObject/etc/fieldset.xsd">
+    <scope id="global">
+        <fieldset id="sales_convert_quote_address">
+            <field name="wrap_total_amount">
+                <aspect name="to_order" />
+            </field>
+            <field name="base_wrap_total_amount">
+                <aspect name="to_order" />
+            </field>
+        </fieldset>
+        <fieldset id="sales_convert_quote">
+            <field name="wrap_total_amount">
+                <aspect name="to_order" />
+            </field>
+            <field name="base_wrap_total_amount">
+                <aspect name="to_order" />
+            </field>
+        </fieldset>
+    </scope>
+</config>

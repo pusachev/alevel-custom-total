@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author     Pavel Usachev <pausachev@gmail.com>
+ * @copyright  2019 Pavel Usachev
+ * @license    https://opensource.org/licenses/BSD-3-Clause  BSD-3-Clause
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.cart.totals">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="block-totals" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="wrap_price" xsi:type="array">
+                                    <item name="component"  xsi:type="string">ALevel_CustomTotal/js/view/checkout/summary/wrap_price</item>
+                                    <item name="sortOrder" xsi:type="string">20</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Wrap Price!</item>
+                                        <item name="template" xsi:type="string">ALevel_CustomTotal/checkout/cart/totals/wrap_price</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

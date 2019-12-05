@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author     Pavel Usachev <pausachev@gmail.com>
+ * @copyright  2019 Pavel Usachev
+ * @license    https://opensource.org/licenses/BSD-3-Clause  BSD-3-Clause
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Sales:etc/sales.xsd">
+    <section name="quote">
+        <group name="totals">
+            <item name="wrap_total" instance="ALevel\CustomTotal\Model\Total\WrapPrice" sort_order="450"/>
+        </group>
+    </section>
+</config>
