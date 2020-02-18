@@ -52,7 +52,8 @@ class WrapTotal extends AbstractBlock
                  ->setLabel(__(CustomTotalInterface::LABEL))
                  ->setCode(CustomTotalInterface::CODE)
                  ->setValue($order->getData(CustomTotalInterface::CODE_AMOUNT))
-                 ->setBaseValue($order->getData(CustomTotalInterface::BASE_CODE_AMOUNT));
+                 ->setBaseValue($order->getData(CustomTotalInterface::BASE_CODE_AMOUNT))
+                 ->build();
 
             $orderTotalsBlock->addTotal($data, 'subtotal');
         }
