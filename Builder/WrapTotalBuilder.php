@@ -23,7 +23,7 @@ class WrapTotalBuilder implements CustomTotalBuilderInterface
     private $code;
 
     /**
-     * @var Phrase
+     * @var string
      */
     private $label;
 
