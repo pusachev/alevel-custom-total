@@ -11,6 +11,7 @@ use ALevel\CustomTotal\Api\Model\Total\CustomTotalInterface;
 use Magento\Framework\View\Element\AbstractBlock;
 use Magento\Framework\View\Element\Context;
 use Magento\Sales\Model\Order;
+use Magento\Sales\Model\Order\Totals;
 
 /**
  * Class WrapTotal
@@ -44,6 +45,7 @@ class WrapTotal extends AbstractBlock
      */
     public function initTotals()
     {
+        /** @var Totals $orderTotalsBlock */
         $orderTotalsBlock = $this->getParentBlock();
         /** @var Order $order */
         $order = $orderTotalsBlock->getOrder();
