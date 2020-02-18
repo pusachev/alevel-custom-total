@@ -46,9 +46,7 @@ class WrapTotal extends Template
         $parent = $this->getParentBlock();
         $source = $parent->getSource();
 
-        $isDisplay = $source->getData(CustomTotalInterface::CODE_AMOUNT) > 0;
-
-        if ($isDisplay) {
+        if (!empty($source->getData(CustomTotalInterface::CODE_AMOUNT))) {
             $wrapTotalData = $this->getWrapTotalData(
                 $source->getData(CustomTotalInterface::CODE_AMOUNT),
                 $source->getData(CustomTotalInterface::BASE_CODE_AMOUNT)
@@ -71,7 +69,7 @@ class WrapTotal extends Template
                     ->setCode(CustomTotalInterface::CODE)
                     ->setValue($total)
                     ->setBaseValue($baseTotal)
-                    ->setLabel(__(CustomTotalInterface::LABEL))
+                    ->setLabel(CustomTotalInterface::LABEL)
                     ->build();
     }
 }
