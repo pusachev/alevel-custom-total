@@ -104,7 +104,7 @@ class WrapTotalBuilder implements CustomTotalBuilderInterface
     /**
      * @inheritDoc
      */
-    public function setLabel(Phrase $label): CustomTotalBuilderInterface
+    public function setLabel(string $label): CustomTotalBuilderInterface
     {
         $this->label = $label;
 

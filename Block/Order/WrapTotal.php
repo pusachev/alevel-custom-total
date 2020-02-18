@@ -49,9 +49,10 @@ class WrapTotal extends AbstractBlock
         $orderTotalsBlock = $this->getParentBlock();
         /** @var Order $order */
         $order = $orderTotalsBlock->getOrder();
-        if ($order->getData(CustomTotalInterface::CODE_AMOUNT) > 0) {
+        if (!empty($order->getData(CustomTotalInterface::CODE_AMOUNT))) {
             $data = $this->builder
-                 ->setLabel(__(CustomTotalInterface::LABEL))
+                /** @TODO Add total label to system config */
+                 ->setLabel(CustomTotalInterface::LABEL)
                  ->setCode(CustomTotalInterface::CODE)
                  ->setValue($order->getData(CustomTotalInterface::CODE_AMOUNT))
                  ->setBaseValue($order->getData(CustomTotalInterface::BASE_CODE_AMOUNT))

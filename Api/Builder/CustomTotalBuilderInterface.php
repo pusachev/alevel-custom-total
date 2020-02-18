@@ -33,7 +33,7 @@ interface CustomTotalBuilderInterface
     public function setValue(float $value) : CustomTotalBuilderInterface;
 
     /**
-     * @param float $value
+     * @param float $baseValue
      * @return CustomTotalBuilderInterface
      */
     public function setBaseValue(float $baseValue) : CustomTotalBuilderInterface;
@@ -42,5 +42,5 @@ interface CustomTotalBuilderInterface
      * @param string $label
      * @return CustomTotalBuilderInterface
      */
-    public function setLabel(Phrase $label) : CustomTotalBuilderInterface;
+    public function setLabel(string $label) : CustomTotalBuilderInterface;
 }
